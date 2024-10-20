@@ -15,16 +15,16 @@ public class RuleEntity {
     @Column(name = "rule_string")
     private String ruleString;
 
-    // Default constructor required by JPA
+
     public RuleEntity() {
     }
 
-    // Constructor to set the rule string
+
     public RuleEntity(String ruleString) {
         this.ruleString = ruleString;
     }
 
-    // Getters and setters
+
     public Long getId() {
         return id;
     }

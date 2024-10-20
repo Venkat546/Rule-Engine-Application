@@ -7,12 +7,12 @@ import lombok.Setter;
 @Getter
 public class Node {
     // Getters
-    private String type; // "operand" or "operator"
-    private String value; // Condition or operator (like "AND" or "OR")
-    private Node left; // Left child
-    private Node right; // Right child
+    private String type;
+    private String value;
+    private Node left;
+    private Node right;
 
-    // Constructor for operand nodes
+
     public Node(String type, String value) {
         this.type = type;
         this.value = value;
@@ -20,7 +20,7 @@ public class Node {
         this.right = null;
     }
 
-    // Constructor for operator nodes
+
     public Node(String type, String value, Node left, Node right) {
         this.type = type;
         this.value = value;

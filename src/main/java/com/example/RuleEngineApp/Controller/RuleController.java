@@ -20,21 +20,21 @@ public class RuleController {
     private RuleService ruleService;
 
 
-    // Endpoint to create a rule (already implemented)
+
     @PostMapping("/create")
     public Node createRule(@RequestBody Map<String, String> payload) {
         String ruleString = payload.get("ruleString");
         return ruleService.createRule(ruleString);
     }
 
-    // Endpoint to evaluate a rule against user data
+
     @PostMapping("/evaluate")
     public boolean evaluateRule(@RequestBody Map<String, Object> requestData) {
-        // Assuming the request contains a "rule" (AST) and "data" (attributes)
+
         Node ruleNode = ruleService.createRule("age > 30 AND salary > 50000");  // Example rule
         Map<String, Object> data = (Map<String, Object>) requestData.get("data");
 
-        // Evaluate the rule against the data
+
         return ruleService.evaluateRule(ruleNode, data);
     }
 
