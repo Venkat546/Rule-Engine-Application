@@ -1,9 +1,9 @@
                         Rule Engine
 
 
-###########################
-Introduction  
 ###########################  
+Introduction    
+###########################    
 
 The Rule Engine Application is a Spring Boot-based microservice designed to evaluate business rules dynamically. These rules, represented in a human-readable format, are transformed into an Abstract Syntax Tree (AST) for evaluation against user-provided data. The application allows the creation, evaluation, combination, and persistence of rules, which can range from simple comparisons to complex logical expressions 
 involving multiple attributes. With its flexibility and scalability, the system can handle various business logic scenarios eLectively, making it ideal for applications requiring dynamic decision-making based on user attributes like age, salary, and department.
