@@ -59,7 +59,7 @@ These dependencies include:
 • H2 Database: An in-memory database used for testing.      
 • Lombok: Reduces boilerplate code.      
 • Spring Boot Starter Test: Provides tools for writing unit and integration tests.      
-• Spring Boot Starter Web: Provides REST API functionality Just ensure that Maven is installed and properly set up on your system, then you can build and run the project as described in the setup instructions.  
+• Spring Boot Starter Web: Provides REST API functionality Just ensure that Maven is installed and properly set up on your system, and then you can build and run the project as described in the instructions.
 
 
 ###########################   
