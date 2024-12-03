@@ -6,12 +6,10 @@ import lombok.Setter;
 @Setter
 @Getter
 public class Node {
-    // Getters
     private String type;
     private String value;
     private Node left;
     private Node right;
-
 
     public Node(String type, String value) {
         this.type = type;
@@ -20,7 +18,6 @@ public class Node {
         this.right = null;
     }
 
-
     public Node(String type, String value, Node left, Node right) {
         this.type = type;
         this.value = value;
@@ -28,4 +25,20 @@ public class Node {
         this.right = right;
     }
 
+    // Getter methods (explicitly defining them, but @Getter from Lombok will automatically generate them as well)
+    public String getType() {
+        return type;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public Node getLeft() {
+        return left;
+    }
+
+    public Node getRight() {
+        return right;
+    }
 }
