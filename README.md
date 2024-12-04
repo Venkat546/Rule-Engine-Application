@@ -68,14 +68,14 @@ The application provides the following REST API endpoints for creating, combinin
 
 ### 1. Create a Rule  
 
-**Request:**      
+#### Request:####     
     json  
             ```{    
                 "ruleString": "age > 30 AND salary > 50000"      
                }   ``` 
 
 
-**Response:**         
+####Response:####         
             ```{      
                "type": "operator",      
                "value": "AND",      
@@ -91,7 +91,7 @@ The application provides the following REST API endpoints for creating, combinin
               
 ### 2. Evaluate a Rule    
 
-**Request:**       
+####Request:####       
         ```{    
            "data": {    
            "age": 32,    
@@ -99,18 +99,18 @@ The application provides the following REST API endpoints for creating, combinin
           }    
           }```   
 
-**Response:**       
+####Response:####       
           ```True```    
 
 ### 3. Combine Rules      
 
-  **Request:**       
+  ####Request:####      
             ```{    
                 "age > 30",      
                 "salary > 50000"    
                 }```    
 
-  **Response:**       
+  ####Response:####       
                 ```{    
                    "type": "operator",    
                     "value": "AND",    
@@ -126,10 +126,10 @@ The application provides the following REST API endpoints for creating, combinin
 
 ### 4. Get a Rule by ID  
 
-  **Request:**       
+ ####Request:####      
              GET ```/api/rules/get/{id}```    
 
-  **Response:**       
+  ####Response:####       
                 ```{    
                   "id": 1,    
                  "ruleString": "age > 30 AND salary > 50000"    
