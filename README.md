@@ -62,7 +62,19 @@ The application provides the following REST API endpoints for creating, combinin
 | POST   | `/api/rules/evaluate`   | Evaluates a rule against user data|
 | POST   | `/api/rules/combine`    | Combines multiple rules into a single AST |
 | POST   | `/api/rules/save`       | Saves a rule to the database      |
-| GET    | `/api/rules/get/{id}`   | Retrieves a rule by its ID        |
+| GET    | `/api/rules/get/{id}`   | Retrieves a rule by its ID        |  
+
+
+## Testing the API  
+
+You can test the REST API endpoints using Postman by following these steps:  
+
+-Open Postman and create a new request.  
+-Set the HTTP method (e.g., POST or GET).  
+-Enter the endpoint URL (e.g., http://localhost:8080/api/rules/create).  
+-For POST requests, set the request body in JSON format.  
+-Send the request and check the response in the Postman interface.
+
 
 ## Request and Response    
 
@@ -144,15 +156,6 @@ JSON  ```
  
 
 
-## Testing the API  
-
-You can test the REST API endpoints using Postman by following these steps:  
-
--Open Postman and create a new request.  
--Set the HTTP method (e.g., POST or GET).  
--Enter the endpoint URL (e.g., http://localhost:8080/api/rules/create).  
--For POST requests, set the request body in JSON format.  
--Send the request and check the response in the Postman interface.
 
 
 ## Conclusion  
