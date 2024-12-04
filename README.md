@@ -64,80 +64,80 @@ The application provides the following REST API endpoints for creating, combinin
 | POST   | `/api/rules/save`       | Saves a rule to the database      |
 | GET    | `/api/rules/get/{id}`   | Retrieves a rule by its ID        |
 
-## Request and Response Examples
+## Request and Response    
 
 ### 1. Create a Rule  
 
-**Request:**    
-    json
-            ```{  
-                "ruleString": "age > 30 AND salary > 50000"  
-               } ``` 
+**Request:**      
+    json  
+            ```{    
+                "ruleString": "age > 30 AND salary > 50000"      
+               }   ``` 
 
+
+**Response:**         
+            ```{      
+               "type": "operator",      
+               "value": "AND",      
+               "left": {    
+                "type": "operand",    
+                "value": "age > 30"    
+              },    
+                "right": {    
+                "type": "operand",    
+                "value": "salary > 50000"    
+                }    
+              }```  
+              
+### 2. Evaluate a Rule    
+
+**Request:**       
+        ```{    
+           "data": {    
+           "age": 32,    
+           "Salary": 60000    
+          }    
+          }```   
 
 **Response:**       
+          ```True```    
+
+### 3. Combine Rules      
+
+  **Request:**       
             ```{    
-               "type": "operator",    
-               "value": "AND",    
-               "left": {  
-                "type": "operand",  
-                "value": "age > 30"  
-              },  
-                "right": {  
-                "type": "operand",  
-                "value": "salary > 50000"  
-                }  
-              }```
-              
-### 2. Evaluate a Rule  
+                "age > 30",      
+                "salary > 50000"    
+                }```    
 
-**Request:**     
-        ```{  
-           "data": {  
-           "age": 32,  
-           "Salary": 60000  
-          }  
-          }``` 
-
-**Response:**     
-          ```True```  
-
-### 3. Combine Rules    
-
-  **Request:**     
-            ```{  
-                "age > 30",    
-                "salary > 50000"  
-                }```  
-
-  **Response:**     
-                ```{  
-                   "type": "operator",  
-                    "value": "AND",  
-                    "left": {  
-                    "type": "operand",  
-                    "value": "age > 30"  
-                   },  
-                      "right": {  
-                      "type": "operand",  
-                      "value": "salary > 50000"  
-                  }  
-                  }```  
+  **Response:**       
+                ```{    
+                   "type": "operator",    
+                    "value": "AND",    
+                    "left": {    
+                    "type": "operand",    
+                    "value": "age > 30"    
+                   },    
+                      "right": {    
+                      "type": "operand",    
+                      "value": "salary > 50000"    
+                  }    
+                  }```    
 
 ### 4. Get a Rule by ID  
 
-  **Request:**     
-             GET ```/api/rules/get/{id}```  
+  **Request:**       
+             GET ```/api/rules/get/{id}```    
 
-  **Response:**     
-                ```{  
-                  "id": 1,  
-                 "ruleString": "age > 30 AND salary > 50000"  
-                 }  
-                 {  
-                  "id": 1,  
-                  "ruleString": "age > 30 AND salary > 50000"  
-                  }```    
+  **Response:**       
+                ```{    
+                  "id": 1,    
+                 "ruleString": "age > 30 AND salary > 50000"    
+                 }    
+                 {    
+                  "id": 1,    
+                  "ruleString": "age > 30 AND salary > 50000"    
+                  }```      
  
 
 
