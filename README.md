@@ -68,13 +68,11 @@ The application provides the following REST API endpoints for creating, combinin
 
 ### 1. Create a Rule  
 
-  **Request:**    
-      ```json
-            {  
-            "ruleString": "age > 30 AND salary > 50000"  
-            }  
-
-  **Response:**       
+**Request:**    
+```json
+    {  
+    "ruleString": "age > 30 AND salary > 50000"  
+    } **Response:**       
             {    
             "type": "operator",    
             "value": "AND",    
@@ -136,7 +134,9 @@ The application provides the following REST API endpoints for creating, combinin
                 {  
                   "id": 1,  
                   "ruleString": "age > 30 AND salary > 50000"  
-                }  
+                }    
+ 
+
 
 ## Testing the API  
 
@@ -152,6 +152,7 @@ You can test the REST API endpoints using Postman by following these steps:
 ## Conclusion  
 
 This Rule Engine Application is a robust system designed to evaluate complex business rules dynamically. It uses an Abstract Syntax Tree (AST) to structure and evaluate rules efficiently, making it suitable for decision-making based on multiple user attributes. The system allows for the creation, combination, and evaluation of rules, with a focus on flexibility and scalability. Future extensions could include more advanced validation and support for user-defined functions to handle even more intricate conditions.  
+
 
 
 
