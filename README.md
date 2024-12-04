@@ -19,7 +19,7 @@ The project is built using the following technologies:
 ### 1. Clone the Repository  
 Clone the project repository from GitHub using the following command:    
 git clone https://github.com/Venkat546/Rule-Engine-Application.git  
-cd RuleEngineApp  
+cd Rule-Engine-Application  
 
 
 ### 2. Build the Application  
