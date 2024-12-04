@@ -99,7 +99,7 @@ The application provides the following REST API endpoints for creating, combinin
           }    
           }```   
 
-### Response:       
+#### Response:       
           ```True```    
 
 ### 3. Combine Rules      
@@ -126,7 +126,7 @@ The application provides the following REST API endpoints for creating, combinin
 
 ### 4. Get a Rule by ID  
 
- ### Request:      
+ #### Request:      
              GET ```/api/rules/get/{id}```    
 
   #### Response:       
