@@ -69,7 +69,7 @@ The application provides the following REST API endpoints for creating, combinin
 ### 1. Create a Rule  
 
   **Request:**    
-      ```json  
+      ```json
             {  
             "ruleString": "age > 30 AND salary > 50000"  
             }  
