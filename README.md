@@ -142,11 +142,11 @@ The application provides the following REST API endpoints for creating, combinin
 
 You can test the REST API endpoints using Postman by following these steps:  
 
-Open Postman and create a new request.  
-Set the HTTP method (e.g., POST or GET).  
-Enter the endpoint URL (e.g., http://localhost:8080/api/rules/create).  
-For POST requests, set the request body in JSON format.  
-Send the request and check the response in the Postman interface.
+-Open Postman and create a new request.  
+-Set the HTTP method (e.g., POST or GET).  
+-Enter the endpoint URL (e.g., http://localhost:8080/api/rules/create).  
+-For POST requests, set the request body in JSON format.  
+-Send the request and check the response in the Postman interface.
 
 
 ## Conclusion  
