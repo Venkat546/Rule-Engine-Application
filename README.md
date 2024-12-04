@@ -72,7 +72,7 @@ The application provides the following REST API endpoints for creating, combinin
     json  
             ```{    
                 "ruleString": "age > 30 AND salary > 50000"      
-               }   ``` 
+               } 
 
 
 #### Response:       
@@ -87,7 +87,7 @@ The application provides the following REST API endpoints for creating, combinin
                 "type": "operand",    
                 "value": "salary > 50000"    
                 }    
-              }```  
+              }  
               
 ### 2. Evaluate a Rule    
 
@@ -97,10 +97,10 @@ The application provides the following REST API endpoints for creating, combinin
            "age": 32,    
            "Salary": 60000    
           }    
-          }```   
+          }  
 
 #### Response:       
-          ```True```    
+          ```True    
 
 ### 3. Combine Rules      
 
@@ -108,10 +108,10 @@ The application provides the following REST API endpoints for creating, combinin
             ```{    
                 "age > 30",      
                 "salary > 50000"    
-                }```    
+                }    
 
   #### Response:       
-                ```{    
+                  {    
                    "type": "operator",    
                     "value": "AND",    
                     "left": {    
@@ -122,22 +122,22 @@ The application provides the following REST API endpoints for creating, combinin
                       "type": "operand",    
                       "value": "salary > 50000"    
                   }    
-                  }```    
+                  }    
 
 ### 4. Get a Rule by ID  
 
  #### Request:      
-             GET ```/api/rules/get/{id}```    
+             GET /api/rules/get/{id}   
 
   #### Response:       
-                ```{    
+                 {    
                   "id": 1,    
                  "ruleString": "age > 30 AND salary > 50000"    
                  }    
                  {    
                   "id": 1,    
                   "ruleString": "age > 30 AND salary > 50000"    
-                  }```      
+                  }    
  
 
 
