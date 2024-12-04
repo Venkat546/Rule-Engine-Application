@@ -128,9 +128,9 @@ JSON  ```
 ### 4. Get a Rule by ID  
 
  #### Request:      
-  #####GET  ```
+  ##### GET  
              /api/rules/get/{id} 
-             ```
+             
 
   #### Response:       
                  {    
