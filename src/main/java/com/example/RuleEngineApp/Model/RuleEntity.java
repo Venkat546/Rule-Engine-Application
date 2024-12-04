@@ -41,4 +41,3 @@ public class RuleEntity {
         this.ruleString = ruleString;
     }
 }
-
