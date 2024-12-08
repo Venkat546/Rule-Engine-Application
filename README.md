@@ -18,28 +18,47 @@ The project is built using the following technologies:
 
 ### 1. Clone the Repository  
 Clone the project repository from GitHub using the following command:    
+```
 git clone https://github.com/Venkat546/Rule-Engine-Application.git  
-cd Rule-Engine-Application  
+   cd Rule-Engine-Application
+```
 
 
 ### 2. Build the Application  
-Use Maven to clean and build the project:  
-mvn clean install
+Use Maven to clean and build the project:    
+```mvn clean install```
 
 
-### 3. Run the Application  
-Start the Spring Boot application using Maven:    
-mvn spring-boot:run  
+### 3. Run the Application Locally
+Start the Spring Boot application using Maven:
+```mvn spring-boot:run```  
+Once the application is running, it will be accessible at `http://localhost:8080`.  
+
+### 4. Dockerize the Application
+The application can be containerized using Docker for simplified deployment. Follow these steps to build and run the Docker container:  
+
+#### 1.Build the Docker Image
+Ensure Docker is installed and running on your system. Use the following command to build the Docker image:
+```docker build -t rule-engine-application .```
+#### 2.Run the Docker Container
+Start a container from the built image:
+```docker run -d -p 8080:8080 --name rule-engine rule-engine-application```
+The application will now be accessible at `http://localhost:8080`.
 
 
-Once the application is running, it will be accessible at `http://localhost:8080`.
+#### 3.Connect with MySQL (Optional)
+If you wish to use MySQL instead of the H2 database:
+- Update the application.properties file with the MySQL configuration.
+- Include the MySQL database service in your docker-compose.yml file.
 
-### 4. Access the H2 Database  
+
+### 5. Access the H2 Database  
 The application uses an in-memory H2 database, which can be accessed via the H2 console at:  
 - **URL**: `http://localhost:8080/h2-console`  
 - **JDBC URL**: `jdbc:h2:mem:testdb`  
 - **Username**: `sa`  
 - **Password**: `password`
+
 
 ## Dependencies    
 
@@ -51,6 +70,7 @@ All necessary dependencies are already included in the project's `pom.xml` file.
 - **Spring Boot Starter Web**: Provides REST API functionality.  
 
 Just ensure that Maven is installed and properly set up on your system, and then you can build and run the project as described in the instructions.
+
 
 ## API Endpoints  
 
@@ -89,7 +109,7 @@ JSON  ```
 
 
 #### Response:       
-            ```{      
+              {      
                "type": "operator",      
                "value": "AND",      
                "left": {    
