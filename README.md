@@ -25,12 +25,16 @@ git clone https://github.com/Venkat546/Rule-Engine-Application.git
 
 
 ### 2. Build the Application  
-Use Maven to clean and build the project:    
+Use Maven to clean and build the project: 
+
+
 `mvn clean install`
 
 
 ### 3. Run the Application Locally  
-Start the Spring Boot application using Maven:    
+Start the Spring Boot application using Maven: 
+
+
 `mvn spring-boot:run`  
 
 
@@ -41,9 +45,15 @@ The application can be containerized using Docker for simplified deployment. Fol
 
 #### 1. Build the Docker Image  
 Ensure Docker is installed and running on your system. Use the following command to build the Docker image:  
+
+
 `docker build -t rule-engine-application .`
+
+
 #### 2. Run the Docker Container  
 Start a container from the built image:  
+
+
 `docker run -d -p 8080:8080 --name rule-engine rule-engine-application` 
 
 
