@@ -8,7 +8,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-
 import java.util.List;
 import java.util.Map;
 
@@ -19,40 +18,47 @@ public class RuleController {
     @Autowired
     private RuleService ruleService;
 
-
-
     @PostMapping("/create")
-    public Node createRule(@RequestBody Map<String, String> payload) {
+    public ResponseEntity<Node> createRule(@RequestBody Map<String, String> payload) {
         String ruleString = payload.get("ruleString");
-        return ruleService.createRule(ruleString);
+        Node ruleNode = ruleService.createRule(ruleString);
+
+        if (ruleNode != null) {
+            return ResponseEntity.ok(ruleNode);
+        } else {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+        }
     }
 
-
     @PostMapping("/evaluate")
-    public boolean evaluateRule(@RequestBody Map<String, Object> requestData) {
+    public ResponseEntity<Boolean> evaluateRule(@RequestBody Map<String, Object> requestData) {
+        try {
+            Node ruleNode = ruleService.createRule("age > 30 AND salary > 50000");  // Example rule
+            Map<String, Object> data = (Map<String, Object>) requestData.get("data");
 
-        Node ruleNode = ruleService.createRule("age > 30 AND salary > 50000");  // Example rule
-        Map<String, Object> data = (Map<String, Object>) requestData.get("data");
-
-
-        return ruleService.evaluateRule(ruleNode, data);
+            boolean result = ruleService.evaluateRule(ruleNode, data);
+            return ResponseEntity.ok(result);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(null);
+        }
     }
 
     @PostMapping("/combine")
-    public Node combineRules(@RequestBody List<String> ruleStrings) {
-        return ruleService.combineRules(ruleStrings);
+    public ResponseEntity<Node> combineRules(@RequestBody List<String> ruleStrings) {
+        Node combinedRule = ruleService.combineRules(ruleStrings);
+        if (combinedRule != null) {
+            return ResponseEntity.ok(combinedRule);
+        } else {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+        }
     }
 
     @PostMapping("/save")
-    public RuleEntity saveRule(@RequestBody String ruleString) {
-        return ruleService.saveRule(ruleString);
+    public ResponseEntity<RuleEntity> saveRule(@RequestBody String ruleString) {
+        RuleEntity ruleEntity = ruleService.saveRule(ruleString);
+        return ResponseEntity.status(HttpStatus.CREATED).body(ruleEntity);
     }
-
-
-    public RuleEntity getRule(@PathVariable Long id) {
-        return ruleService.getRule(id);
-    }
-
 
     @GetMapping("/get/{id}")
     public ResponseEntity<RuleEntity> getRuleById(@PathVariable("id") Long id) {
@@ -63,4 +69,6 @@ public class RuleController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
     }
+
+
 }

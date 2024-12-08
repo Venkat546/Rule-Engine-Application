@@ -77,7 +77,10 @@
 	<build>
 		<plugins>
 			<!-- Spring Boot Maven Plugin for running Spring Boot applications -->
-
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
 
 			<!-- Maven Compiler Plugin for setting Java version -->
 			<plugin>
