@@ -12,7 +12,9 @@ The project is built using the following technologies:
 - **Spring Data JPA**: Used for data access and persistence with the H2 in-memory database.  
 - **H2 Database**: A lightweight, in-memory database used for rapid testing and development.  
 - **Lombok**: A Java library that simplifies code with annotations, used for reducing boilerplate in entity and model classes.  
-- **Maven**: Dependency management and build tool used for packaging the application.  
+- **Maven**: Dependency management and build tool used for packaging the application.
+- **Docker**: Enables containerization of the application for simplified deployment and environment consistency.  
+
 
 ## Setup Instructions    
 
