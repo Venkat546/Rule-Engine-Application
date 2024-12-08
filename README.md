@@ -29,21 +29,21 @@ Use Maven to clean and build the project:
 ```mvn clean install```
 
 
-### 3. Run the Application Locally
-Start the Spring Boot application using Maven:
-```mvn spring-boot:run```  
-Once the application is running, it will be accessible at `http://localhost:8080`.  
+### 3. Run the Application Locally  
+Start the Spring Boot application using Maven:    
+```mvn spring-boot:run```    
+Once the application is running, it will be accessible at `http://localhost:8080`.    
 
 ### 4. Dockerize the Application
 The application can be containerized using Docker for simplified deployment. Follow these steps to build and run the Docker container:  
 
-#### 1.Build the Docker Image
-Ensure Docker is installed and running on your system. Use the following command to build the Docker image:
+#### 1. Build the Docker Image  
+Ensure Docker is installed and running on your system. Use the following command to build the Docker image:  
 ```docker build -t rule-engine-application .```
-#### 2.Run the Docker Container
-Start a container from the built image:
-```docker run -d -p 8080:8080 --name rule-engine rule-engine-application```
-The application will now be accessible at `http://localhost:8080`.
+#### 2. Run the Docker Container  
+Start a container from the built image:  
+```docker run -d -p 8080:8080 --name rule-engine rule-engine-application```  
+The application will now be accessible at `http://localhost:8080`.  
 
 
 #### 3.Connect with MySQL (Optional)
